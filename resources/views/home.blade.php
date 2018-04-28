@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('content')
 
@@ -25,7 +25,7 @@
                     <!-- Description -->
                     <li class="list-group-item card-bg-light">
                         <h3>The Perfect Pushup</h3>
-                        Proper form is key! This is a great video that provides information on form and technique. The main thing we want to avoid is injury!
+                        Web meetings are dead, love live web meetings!
                     </li>
 
                     <!-- Table of contents -->
@@ -54,7 +54,7 @@
             <br />
 
             <div class="card">
-                <div class="card-header">Discussion</div>
+                <div class="card-header"><h4>Discussion</h4></div>
 
                 <div class="card-body">
                     @if (session('status'))
