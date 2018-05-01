@@ -22,3 +22,9 @@ Route::get('/home', function () {
 });
 
 Route::get('/presentation-for-jeff', 'HomeController@index');
+
+Route::get('/comments/create', 'HomeController@create');
+Route::post('/comments', 'HomeController@store');
+Route::get('/comments/{comment}', 'HomeController@show');
+Route::get('/comments/{comment}/edit', 'HomeController@edit');
+Route::patch('/comments/{comment}', 'HomeController@update');
