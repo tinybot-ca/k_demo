@@ -17,6 +17,9 @@ Route::get('/', function () {
     return redirect('/presentation-for-jeff');
 });
 
-Route::get('/presentation-for-jeff', 'HomeController@index')->name('home');
+Route::get('/home', function () {
+    return redirect('/presentation-for-jeff');
+});
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/presentation-for-jeff', 'HomeController@index');
+
