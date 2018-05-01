@@ -27,6 +27,6 @@ class LogPasswordReset
      */
     public function handle(PasswordReset $event)
     {
-        Log::notice('Password Reset: ' . $event->user->name . ' (' . $event->user->email . ')');
+        Log::notice('Password Reset: ' . $event->user->name . ' (' . $event->user->email . ') ' . request()->ip() );
     }
 }

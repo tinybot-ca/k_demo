@@ -27,6 +27,6 @@ class LogRegisteredUser
      */
     public function handle(Registered $event)
     {
-        Log::notice('Registered User: ' . $event->user->name . ' (' . $event->user->email . ')');
+        Log::notice('Registered User: ' . $event->user->name . ' (' . $event->user->email . ') ' . request()->ip());
     }
 }

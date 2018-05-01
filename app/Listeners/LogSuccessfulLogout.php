@@ -27,6 +27,6 @@ class LogSuccessfulLogout
      */
     public function handle(Logout $event)
     {
-        Log::notice('Successful Logout: ' . $event->user->name . ' (' . $event->user->email . ')');
+        Log::notice('Successful Logout: ' . $event->user->name . ' (' . $event->user->email . ') ' . request()->ip() );
     }
 }

@@ -27,6 +27,6 @@ class LogSuccessfulLogin
      */
     public function handle(Login $event)
     {
-        Log::notice('Successful Login: ' . $event->user->name . ' (' . $event->user->email . ')');
+        Log::notice('Successful Login: ' . $event->user->name . ' (' . $event->user->email . ') ' . request()->ip());
     }
 }
