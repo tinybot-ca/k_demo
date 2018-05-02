@@ -10,23 +10,22 @@
             <div class="card">
 
                 <div class="card-header">
-                    <h4>Edit Comment</h4>
+                    <h4>Delete Comment</h4>
                 </div>
 
                 <!-- Action Buttons -->
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item grid-bg">
-                        <a class="btn btn-outline-primary btn-sm " href="/">Cancel</a>
-                        <a class="btn btn-outline-primary btn-sm " href="/comments/{{ $comment->id }}/delete">Delete</a>
+                        <a class="btn btn-outline-primary btn-sm " href="{{ url()->previous() }}">Cancel</a>
                     </li>
                 </ul>
                 
                 <div class="card-body">
                     
-                    {{-- @include ('layouts.errors') --}}
+                    <div class="alert alert-danger"><strong>Warning!</strong> Are you sure you want to delete this?</div>
 
-                    <form method="POST" action="/comments/{{ $comment->id }}" >
-                        {{ method_field('PATCH') }}
+                    <form method="POST" action="/comments/{{ $comment->id }}/delete" >
+                        {{ method_field('DELETE') }}
                         {{ csrf_field() }}
 
                         <div class="form-group row">
@@ -35,7 +34,7 @@
                             </label>
 
                             <div class="col-md-6">
-                                <textarea class="form-control{{ $errors->has('comment') ? ' is-invalid' : '' }}" id="comment" name="comment" required >{{ $comment->body }}</textarea>
+                                <textarea class="form-control{{ $errors->has('comment') ? ' is-invalid' : '' }}" id="comment" name="comment" disabled >{{ $comment->body }}</textarea>
                             </div>
 
                             @if ($errors->has('date'))
@@ -48,7 +47,7 @@
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Submit
+                                    Delete
                                 </button>
                             </div>
                         </div>

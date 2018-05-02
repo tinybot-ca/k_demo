@@ -10,7 +10,7 @@
             <div class="card">
 
                 <div class="card-header">
-                    <h4>New Submission</h4>
+                    <h4>New Comment</h4>
                 </div>
 
                 <!-- Action Buttons -->

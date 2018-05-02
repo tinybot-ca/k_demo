@@ -83,4 +83,28 @@ class HomeController extends Controller
         return redirect('/');
     }
 
+    public function delete(Comment $comment)
+    {
+        if (auth()->id() != $comment->user->id) {
+            session()->flash('message', 'Unauthorized access.');
+
+            return back();
+        }
+
+        return view('comments.delete', compact('comment'));
+    }
+
+    public function destroy(Comment $comment)
+    {
+        if (auth()->id() != $comment->user->id) {
+            session()->flash('message', 'Unauthorized access.');
+
+            return back();
+        }
+        
+        $comment->delete();
+
+        return redirect('/');
+    }
+
 }
