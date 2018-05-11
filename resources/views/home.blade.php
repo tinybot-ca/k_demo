@@ -13,19 +13,19 @@
 
                     <div id="video-container">
                 
-                        <video poster="{{ asset('images/poster.png') }}" id="my-video" playsinline controls>
-                            <source src="{{ asset('videos/The_Perfect_Push_Up.mp4') }}" type="video/mp4">
+                        <video poster="{{ asset('images/poster.jpg') }}" id="my-video" playsinline controls>
+                            <source src="{{ asset('videos/Kenna_Video_MW_05-10-2018.mp4') }}" type="video/mp4">
                         
                             <!-- Captions are optional -->
-                            {{-- <track kind="captions" label="English captions" src="/path/to/captions.vtt" srclang="en" default> --}}
+                            <track kind="captions" label="English captions" src="{{ asset('videos/captions.vtt') }}" srclang="en" default>
                         </video>
 
                     </div>
 
                     <!-- Description -->
                     <li class="list-group-item card-bg-light">
-                        <h3>The Perfect Pushup</h3>
-                        Web meetings are dead, love live web meetings!
+                        <h3>Business Development Follow-up</h3>
+                        Can personalized, targeted video be leveraged as an effective business development tactic with B2B prospects?
                     </li>
 
                     <!-- Table of contents -->
@@ -33,19 +33,19 @@
                         00:00 &nbsp;<a href="javascript:void(0)" onclick="seek(0)">Introduction</a>
                     </li>
                     <li class="list-group-item">
-                        00:30 &nbsp;<a href="javascript:void(0)" onclick="seek(30)">Body Position</a>
+                        00:37 &nbsp;<a href="javascript:void(0)" onclick="seek(37)">BASF: The Opportunity</a>
                     </li>
                     <li class="list-group-item">
-                        00:57 &nbsp;<a href="javascript:void(0)" onclick="seek(57)">Arm Position</a>
+                        02:02 &nbsp;<a href="javascript:void(0)" onclick="seek(122)">Customer Lifecycle Curve</a>
                     </li>
                     <li class="list-group-item">
-                        02:02 &nbsp;<a href="javascript:void(0)" onclick="seek(122)">Range of Motion</a>
+                        02:31 &nbsp;<a href="javascript:void(0)" onclick="seek(151)">Video Content Ideas</a>
                     </li>
                     <li class="list-group-item">
-                        02:20 &nbsp;<a href="javascript:void(0)" onclick="seek(140)">Shoulderblade Movement</a>
+                        03:17 &nbsp;<a href="javascript:void(0)" onclick="seek(197)">Personal Update</a>
                     </li>
                     <li class="list-group-item">
-                        03:03 &nbsp;<a href="javascript:void(0)" onclick="seek(183)">Summary</a>
+                        04:37 &nbsp;<a href="javascript:void(0)" onclick="seek(277)">Next Steps</a>
                     </li>
                     
                 </div><!-- card body -->
@@ -83,7 +83,11 @@
 
 <script>
 
-    const player = new Plyr('#my-video');
+    const player = new Plyr('#my-video', {
+        captions: {
+            active: true
+        }
+    });
     
     var myVideo = document.getElementById("my-video"); 
 
