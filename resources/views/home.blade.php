@@ -83,28 +83,28 @@
 
 <script>
 
-    const player = new Plyr('#my-video', {
-        captions: {
-            active: true
-        }
-    });
+    // const player = new Plyr('#my-video', {
+    //     captions: {
+    //         active: true
+    //     }
+    // });
     
-    var myVideo = document.getElementById("my-video"); 
+    // var myVideo = document.getElementById("my-video"); 
 
-    function seek(seconds) {
-        myVideo.currentTime = seconds;
+    // function seek(seconds) {
+    //     myVideo.currentTime = seconds;
 
-        if (myVideo.paused) { 
-            myVideo.play();
-        }
-    }
+    //     if (myVideo.paused) { 
+    //         myVideo.play();
+    //     }
+    // }
 
-    document.documentElement.addEventListener('keydown', function (e) {
-        if ( ( e.keycode || e.which ) == 32) {
-            e.preventDefault();
-            myVideo.paused ? myVideo.play() : myVideo.pause();
-        }
-    }, false);
+    // document.documentElement.addEventListener('keydown', function (e) {
+    //     if ( ( e.keycode || e.which ) == 32) {
+    //         e.preventDefault();
+    //         myVideo.paused ? myVideo.play() : myVideo.pause();
+    //     }
+    // }, false);
 
     // Todo: Map arrow keys to rewind or forward +/- 10 secs
     // https://stackoverflow.com/questions/38604103/how-can-you-make-video-js-skip-forwards-and-backwards-15-seconds
