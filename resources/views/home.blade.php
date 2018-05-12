@@ -118,11 +118,11 @@
     }
 
     $(function() {
-        // resize();
+        resize();
     });
 
     $( window ).resize(function() {
-        // resize();
+        resize();
     });
 
 </script>
